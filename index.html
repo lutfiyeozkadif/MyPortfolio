@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8c0ab27376.js" crossorigin="anonymous"></script>
+    <style>
+
+        .card-yazi{
+            text-align: center;
+            color: black;
+            font-size: 1rem;
+        }
+
+        .text-body-lutfiye{
+            color: #669c35;
+            text-decoration: overline ;
+        }
+
+        .gebe{
+            text-decoration: underline;
+            color: green;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .anne{
+            text-align: center;
+            color: black;
+            font-size: 1rem;
+        }
+
+        .lutfiye{
+            color: #669c35;
+            font-size: 1rem;
+            text-decoration: overline;
+        }
+
+        #apple{
+            font-size: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tarif{
+          height: 100px;
+          width: 100%;
+          box-sizing: border-box;
+          border: 8px solid rgb(245, 208, 3);
+          text-indent: 4px;
+          text-decoration: underline;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .card-img-top:hover {
+ -ms-transform: scale(1.3); /* IE 9 */
+ -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3); 
+}
+
+
+          .tarif:hover {
+ -ms-transform: scale(1.3); /* IE 9 */
+ -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3); 
+}
+
+        .footer{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          border: 8px solid black;
+          background-color: goldenrod;
+          
+          
+        }
+
+        .footerUl{
+          list-style: none;
+        }
+
+    </style>
+</head>
+  <body>
+                     <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Diyetle Beslenme ve Danışmanlık Merkezi <i class="fa-brands fa-nutritionix fa-beat-fade" style="color: #669c35;"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Hesaplamalar</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="http://www.diyetle.com.tr/kadin-hesaplamalar/">Beden Kitle İndeksi</a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link" href="http://www.diyetle.com.tr/kadin-hesaplamalar/#tab-1-3-bazal-metabolizma-hz">Bazal Metabolizma Hızı</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Günlük Enerji İhtiyacı
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="http://www.diyetle.com.tr/kadin-hesaplamalar/#tab-1-2-gnlk-enerji-htiyac">Kadın</a></li>
+                    <li><a class="dropdown-item" href="http://www.diyetle.com.tr/erkek-hesaplamalar/#tab-1-2-gnlk-enerji-htiyac">Erkek</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="http://www.diyetle.com.tr/kadin-hesaplamalar/#tab-1-5-vcut-yaps-belirleme">Vücut Yapısı Belirleme</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
+                <button class="btn btn-success" type="submit">Ara</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+                  <!-- SAYILARLA GİRİŞ -->
+      <div class="card mb-3">
+        <img src="http://www.diyetle.com.tr/wp-content/uploads/2017/02/slide1-4.jpg" class="card-img-top" alt="...">
+        <div class="card-yazi">
+          <h5 class="card-title">Tartılmaktan Korkma</h5>
+          <p class="card-text">Haftada bir kez, sabah saatlerinde ve aç karnına tartılmak doğru sonuç verir. </p>
+          <p class="card-text"><small class="text-body-lutfiye"> Dyt.Lütfiye ŞENCAN</small></p>
+        </div>
+      </div>
+      <p> <i id="apple" class="fa-brands fa-nutritionix fa-beat-fade" style="color: #669c35;"></i></p>
+      <div class="card">
+        <div class="card-yazi">
+          <h5 class="card-title">Aynadan Korkma</h5>
+          <p class="card-text">Vücudunu ayna karşısında inceleyebilirsin ve vücut tipin hakkında bilgi sahibi olmalısın.</p>
+          <p class="card-text"><small class="text-body-lutfiye">Dyt. Lütfiye ŞENCAN</small></p>
+        </div>
+        <img src="http://www.diyetle.com.tr/wp-content/uploads/2017/02/slide2-3.jpg" class="card-img-bottom" alt="...">
+      </div>
+
+            <!-- KARTLAR -->
+      <div class="card-group">
+        <div class="card">
+         
+          <img src="http://www.diyetle.com.tr/wp-content/uploads/2014/07/Gebelik-D%C3%B6neminde-Beslenme.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="http://www.diyetle.com.tr/hizmetlerimiz/">
+            <h5 class="gebe">Gebelik Döneminde Beslenme</h5>
+          </a>
+            <p class="anne">Anne adayları… Hayatınızın bu mucize döneminde en çok dikkat etmeniz gereken konulardan birisidir beslenme. Nasıl bir diyet uygulamalıyım, nelerden uzak durmalı, neleri bol bol tüketmeliyim? İşte tüm bunların cevabını Diyetle Beslenme Ve Danışmanlık Merkezi’nde uzman diyetisyeniniz eşliğindeki eğitimlerle bulabilir, anne olmamın tadını sağlıklı beslenerek çıkarabilirsiniz.</p>
+            <a href="http://www.diyetle.com.tr/hakkimizda/">
+            <p class="card-text"><small class="lutfiye">Dyt. Lütfiye ŞENCAN</small></p>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="http://www.diyetle.com.tr/wp-content/uploads/2014/07/Ad%C3%B6lesan-Ergenlik-%C3%87a%C4%9F%C4%B1nda-Beslenme.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="http://www.diyetle.com.tr/hizmetlerimiz/">
+            <h5 class="gebe">Adölesan Çağında Beslenme</h5>
+          </a>
+            <p class="anne">Ergenlik çağındaki gençlerde büyüme ve gelişme hızlandığı için yeterli ve dengeli beslenmeleri daha da önem kazanır. Beslenme, gencin yaşına göre, boy uzunluğu ve vücut ağırlığının saptanması ile değerlendirilir. Fast food veya abur-cubur beslenme alışkanlığı gençler arasında yaygın olarak görülmektedir. Ne yazık ki bu tür beslenme ile alınan enerjinin nerdeyse %40-50’si yağlardan gelmektedir. Bunun dışında özellikle ergen kız çocuklarında yeme bozuklukları (anoreksiya nervosa, bulimia nervosa vb.) çok sık saptanmaktadır.</p>
+            <a href="http://www.diyetle.com.tr/hakkimizda/">
+            <p class="card-text"><small class="lutfiye">Dyt. Lütfiye ŞENCAN</small></p>
+          </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="http://www.diyetle.com.tr/wp-content/uploads/2014/07/Ya%C5%9Fl%C4%B1l%C4%B1k-ve-Beslenme.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="http://www.diyetle.com.tr/hizmetlerimiz/">
+            <h5 class="gebe">Yaşlılık ve Beslenme</h5>
+          </a>
+            <p class="anne">Bugün ülkemizde 65 yaş ve üzerinde yaklaşık 4 milyon kişi yaşamaktadır. Türkiye’de yaşlı nüfus oranı ve söz konusu popülasyonda hastalık görülme sıklığı da gün geçtikçe artmaktadır. Her yaş grubunda olduğu gibi bu yaş grubunda da yeterli ve dengeli beslenmenin önemi büyüktür. Bu sayede gelişen veya gelişmekte olan hastalıklarla başa çıkılabilir. Onlara, yani bizi büyüten annelerimiz, babalarımız, anneannelerimiz, babaannelerimiz, dedelerimize nasıl bir beslenme şekli uygulamalıyız? Hangi besinlerden bolca tüketmelerini sağlamalıyız?..</p>
+          <a href="http://www.diyetle.com.tr/hakkimizda/">
+            <p class="card-text"><small class="lutfiye">Dyt. Lütfiye ŞENCAN</small></p>
+          </a>
+          </div>
+        </div>
+      </div>
+
+              <!-- SAGLIKLI TARİFLER -->
+      <h1 class="tarif">SAĞLIKLI TARİFLER</h1>
+          <!-- TARİF 1 -->
+      <div class="row">
+        <div class="col-6">
+
+      <div class="card mb-3 border border-success-subtle " style="max-width: 700px;">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex align-items-center">
+            <img src="http://www.diyetle.com.tr/wp-content/uploads/2014/07/pogaca.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" > <i class="fa-solid fa-wheat-slash fa-fade" style="color: #669c35;"></i>Glutensiz Poğaça</h5>
+              <p class="card-text">Yapılışı :
+                Patatesleri haşladıktan sonra rendeleyin. Boş ve geniş bir kaba unu boşalttıktan sonra ortasını açın ve diğer malzemleri ekleyin. Hamuru yoğurun ve üzerini kapatıp biraz dinlendirin. Dinlendirdiğiniz hamurdan ceviz büyüklüğünde parçalar kopararak açın. İçerisine peynir ve maydanozdan oluşan karışımdan ekleyerek yuvarlak bir şekil verin. Yumurta sarısını sürdükten sonra çörek otu veya susamı üzerine serpiştirerek 180 derecede ısıtılmış fırına verin. Afiyet olsun.</p>
+               <a href="http://www.diyetle.com.tr/glutensiz-tarifler/"> 
+                <p class="card-text"><small class="lutfiye">Dyt. Lütfiye ŞENCAN</small></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- TARİF 2 -->
+      <div class="card mb-3 border border-success-subtle " style="max-width: 700px;">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex align-items-center">
+            <img src="http://www.diyetle.com.tr/wp-content/uploads/2014/07/semizotu.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" > <i class="fa-solid fa-wheat-slash fa-fade" style="color: #669c35;"></i>Semizotu Salatası</h5>
+              <p class="card-text"> Malzemeler:
+                – Yarım nar ayıklanmış
+                – 1 adet portakal
+                – Yarım greyfurt
+                – Yarım demet semizotu
+                – 1 tatlı kaşığı zeytinyağı
+                – Limon
+                – 5-6 adet çiğ badem
+                – Tuz
+                Yapılışı: Semizotunu yıkadıktan sonra iri iri doğrayın. Portakal ve greyfurtu soyduktan sonra küp küp doğrayın. Çiğ bademler ile meyveleri ve semizotunu harmanlayın. Zeytinyağı, limon ve tuzu ekleyerek servis edin. Afiyet olsun.</p>
+               <a href="http://www.diyetle.com.tr/glutensiz-tarifler/"> 
+                <p class="card-text"><small class="lutfiye">Dyt. Lütfiye ŞENCAN</small></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-6">
+
+    <!-- TARİF 3 -->
+        <div class="card mb-3 border border-success-subtle " style="max-width: 700px;">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center">
+              <img src="http://www.diyetle.com.tr/wp-content/uploads/2014/07/soguk-corba.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" > <i class="fa-solid fa-wheat-slash fa-fade" style="color: #669c35;"></i>Soğuk Çorba</h5>
+                <p class="card-text">Malzemeler:
+
+                  -2 adet rendelenmiş salatalık
+                  -2 yemek kaşığı yeşil mercimek
+                  -2 yemek kaşığı haşlanmış bulgur
+                  -3 yemek kaşığı yoğurt
+                  -1 tatlı kaşığı kuru nane
+                  -2 su bardağı su
+                  -Buz parçaları
+                  Yapılışı :
+                  Tüm malzemeleri derin bir kapta karıştırdıktan sonra üzerine su ilave ediniz. Çorbanız, kuru nane ve buz parçalarını da ekledikten sonra servise hazırdır. Afiyet olsun.</p>
+                 <a href="http://www.diyetle.com.tr/fit-corbalar/"> 
+                  <p class="card-text"><small class="lutfiye">Dyt. Lütfiye ŞENCAN</small></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+          <!-- TARİF 4 -->
+        <div class="card mb-3 border border-success-subtle " style="max-width: 700px;">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center">
+              <img src="http://www.diyetle.com.tr/wp-content/uploads/2014/07/karniyarik.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" > <i class="fa-solid fa-wheat-slash fa-fade" style="color: #669c35;"></i>Light Karnıyarık</h5>
+                <p class="card-text">
+                  Malzemeler:
+-4 adet orta boy patlıcan
+-1 adet kuru soğan
+-2 adet domates
+-4 adet sivri biber
+-100 g kıyma
+-1 yemek kaşığı zeytinyağı
+-1 su bardağı domates suyu
+-Tuz
+-Baharat
+
+Yapılışı:
+Kıymayı tavada zeytinyağı ile kavururken bir yandan hazırladığınız ince doğranmış soğan, biber ve domatesleri ekleyin. Kıyma karışımını isteğe bağlı baharatlarınızla tatlandırın. Patlıcanları ikiye bölerek fırında közleyin. Közlenmiş patlıcanların ortasına hazırladığınız kıyma karışımını doldurun. Patlıcanların üzerine domates ve biber dilimlerini yerleştirin. Üzerine domates suyunu ilave ederek fırında pişirin. Afyet olsun.</p>
+                 <a href="http://www.diyetle.com.tr/glutensiz-tarifler/"> 
+                  <p class="card-text"><small class="lutfiye">Dyt. Lütfiye ŞENCAN</small></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+        
+             <!-- VİDEO -->
+      <video src="./images/joined_video_c95d9776ac2b4cf18bf055c710bb2a4c.MP4" controls class="object-fit-contain" width="600px" height="500px" autoplay>play</video>   
+
+
+    
+            <!-- FOOTER -->
+        
+        <div class="footer">
+
+          
+            <div class="row">
+                <div class="col-lg-3 col-sm-12">
+                    <h2>Diyet’le</h2>
+                    <ul class="footerUl">
+                      <li>Hayatınızı kontrol altına almanın en güzel yolu, sağlığınızı kontrol altına almaktır. Kendinizi daha iyi tanımaya, hikayenizi daha yüksek bir yaşam standardında sürdürmeye ne dersiniz?</li>
+                      <li> <a href="http://www.diyetle.com.tr/hizmetlerimiz/">Daha Fazlası</a></li>
+                    </ul>
+
+                </div>
+                
+
+                <div class="col-lg-3 col-sm-12">
+                  <h2>Hızlı Erişim</h2>
+                  <ul class="footerUl">
+                     <li> <a href="http://www.diyetle.com.tr">Anasayfa</a> </li>
+                     <li> <a href="http://www.diyetle.com.tr/hakkimizda/">Hakkımızda</a> </li>
+                     <li> <a href="http://www.diyetle.com.tr/hizmetlerimiz/">Hizmetlerimiz</a> </li>
+                     <li> <a href="http://www.diyetle.com.tr/bize-ulasin/">Bize Ulaşın!</a> </li>
+                </ul>
+              </div>
+                
+                <div class="col-lg-3 col-sm-12">
+                  <h2>Bize Ulaşın!</h2> 
+                  
+                  <ul class="footerUl" >
+                     <li>Lütfiye ŞENCAN</li>
+                     <li><i class="fa-light fa-mobile"></i> +90 530 418 76 86</li>
+                     <li> <i class="fa-duotone fa-phone" style="--fa-primary-color: #ffb43f; --fa-secondary-color: #ffb43f;"></i> +90 312 418 76 86</li>
+                     <li> <i class="fa-solid fa-square-envelope"></i> info@diyetle.com.tr</li>
+                     <li> <i class="fa-regular fa-location-dot"></i> Karanfil Sokak No 16/63 Kızılay, Ankara </li>
+                </ul>
+              </div>
+              
+                <div class="col-lg-3 col-sm-12">
+                  <h2 class="sosyal text-center">Sosyal Medya'da Diyetle</h2>
+                
+                  <ul class="footerUl text-align-center">
+                      <li class="face text-center"> <a href="https://facebook.com/diyetle"><i class="fa-brands fa-facebook"></i></i></a>  </li>
+                      <hr>
+                      <li class="instag text-center"> <a href="https://www.instagram.com/diyetleTR/"><i class="fa-brands fa-instagram"></i></i></a>  </li>
+                </ul>
+
+              </div>
+              </div>
+
+
+            </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
